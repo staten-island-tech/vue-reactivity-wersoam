@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <button type="button" class="btn" >
-      {{ number }}
-    </button>
-  </div>
+  <button type="button" class="btn">
+    {{ symbols }}
+  </button>
 </template>
 
 <script>
 export default {
   name: "button",
-  prop: {
-    number: String,
+  props: {
+    symbols: String,
   },
 };
 </script>
+
 <style scoped>
 .btn {
   background-color: rgb(227, 196, 255);

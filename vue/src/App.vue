@@ -6,7 +6,7 @@ import btn from "./components/btn.vue";
 <template>
   <div>
     <h1>text</h1>
-    <btn number="1000"></btn>
+    <button></button>
   </div>
 </template>
 

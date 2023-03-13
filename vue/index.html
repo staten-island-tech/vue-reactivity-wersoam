@@ -10,4 +10,14 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+  <script>
+    let numbers = [0, 1, 51, 3, 14, 23, 30];
+    numbers.sort(function (a, b) {
+      if (a > b) return -1;
+      if (a < b) return 1;
+      return 0;
+    });
+
+    console.log(numbers);
+  </script>
 </html>
