@@ -1,7 +1,5 @@
 <template>
-  <button type="button" class="btn">
-    {{ symbols }}
-  </button>
+  <button type="button" class="btn">{{ symbols }}</button>
 </template>
 
 <script>
@@ -16,6 +14,9 @@ export default {
 <style scoped>
 .btn {
   background-color: rgb(227, 196, 255);
-  font-size: 35px;
+  font-size: 15px;
+}
+.btn:hover {
+  background-color: #000dff;
 }
 </style>
