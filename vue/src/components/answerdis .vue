@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label class="answerbox">{{ number }}</label> <input type="text" />
+    <div id="box">{{ number || 0 }}</div>
   </div>
 </template>
 <script>

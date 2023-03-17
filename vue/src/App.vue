@@ -7,7 +7,7 @@ const clear = function () {
   document.getElementById("box").innerHTML = "";
 };
 const click1 = function () {
-  document.getElementById("box").innerText("beforeend", `1`);
+  document.getElementById("box").insertAdjacentHTML("beforeend", `1`);
 };
 const click2 = function () {
   document.getElementById("box").insertAdjacentHTML("beforeend", `2`);
@@ -40,6 +40,7 @@ const click00 = function () {
   document.getElementById("box").insertAdjacentHTML("beforeend", `00`);
 };
 const clickpoint = function () {
+  if (this.document.getElementById("box").includes(".")) return;
   document.getElementById("box").insertAdjacentHTML("beforeend", `.`);
 };
 const clickadd = function (a, b) {
@@ -49,22 +50,22 @@ const clickminus = function (a, b) {
   document.getElementById("box").insertAdjacentHTML("beforeend", `-`);
 };
 const clicktimes = function (a, b) {
-  document.getElementById("box").insertAdjacentHTML("beforeend", `x`);
+  document.getElementById("box").insertAdjacentHTML("beforeend", `*`);
 };
 const clickdiv = function (a, b) {
-  document.getElementById("box").insertAdjacentHTML("beforeend", `÷`);
+  document.getElementById("box").insertAdjacentHTML("beforeend", `/`);
 };
 
 const enter = function () {
-  document
-    .getElementById("box")
-    .value.eval(document.getElementById("box").value);
+  let equation = document.getElementById("box").tostring;
+  let answer = eval(equation);
+  document.getElementById("box").innerHTML = answer;
 };
 </script>
 
 <template>
   <div>
-    <div id="box"></div>
+    <div id="box" v-text="0"></div>
     <div class="press">
       <div>
         <h1>simple calculator</h1>
@@ -83,13 +84,13 @@ const enter = function () {
         <btn @click="click7()" symbols="7"></btn>
         <btn @click="click8()" symbols="8"></btn>
         <btn @click="click9()" symbols="9"></btn>
-        <btn @click="clicktimes()" symbols="x"></btn>
+        <btn @click="clicktimes()" symbols="*"></btn>
       </div>
       <div>
         <btn @click="click00()" symbols="00"></btn>
         <btn @click="click0()" symbols="0"></btn>
         <btn @click="clickpoint()" symbols="."></btn>
-        <btn @click="clickdiv()" symbols="÷"></btn>
+        <btn @click="clickdiv()" symbols="/"></btn>
       </div>
       <div>
         <btn @click="clear()" symbols="clear"></btn>
