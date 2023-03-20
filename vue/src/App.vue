@@ -1,5 +1,5 @@
 <script setup>
-import answer from "./components/answerdis .vue";
+import answer from "./components/answerdis.vue";
 import btn from "./components/btncli.vue";
 
 const box = { box: document.getElementById("box") };
@@ -57,7 +57,7 @@ const clickdiv = function (a, b) {
 };
 
 const enter = function () {
-  let equation = document.getElementById("box").tostring;
+  let equation = document.getElementById("box").stringify;
   let answer = eval(equation);
   document.getElementById("box").innerHTML = answer;
 };
@@ -65,7 +65,7 @@ const enter = function () {
 
 <template>
   <div>
-    <div id="box" v-text="0"></div>
+    <div id="box">{{ number || 0 }}</div>
     <div class="press">
       <div>
         <h1>simple calculator</h1>

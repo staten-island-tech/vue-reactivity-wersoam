@@ -8,7 +8,8 @@
   </head>
   <body>
     <div id="app"></div>
-
+    <div class="wend">5+5</div>
+    <button class="test" onclick="bob()"></button>
     <script type="module" src="/src/main.js"></script>
   </body>
   <script>
@@ -18,6 +19,10 @@
       if (a < b) return 1;
       return 0;
     });
+    let equation = document.querySelector(".wend").stringify;
+    const bob = function () {
+      console.log(eval(equation));
+    };
     let test = 12 / 3;
     console.log(test);
   </script>
