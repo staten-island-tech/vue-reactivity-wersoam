@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import calculator from "./components/calculatorpart.vue";
 </script>
 
 <template>
-  <HelloWorld />
+  <calculator />
 </template>
 
 <style scoped></style>

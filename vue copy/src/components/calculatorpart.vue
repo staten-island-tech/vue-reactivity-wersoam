@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div>{{ calcsign }}</div>
-    <div id="box">
-      <div>{{ calc1 }}</div>
-      <div>{{ answer || 0 }}</div>
+    <div class="outputs">
+      <div id="operation">{{ calcsign }}</div>
+      <div id="box">
+        <div id="calc">{{ calc1 }}</div>
+        <div id="ans">{{ answer || 0 }}</div>
+      </div>
     </div>
     <div class="press">
       <div>
@@ -61,23 +63,33 @@ export default {
       } else if (this.calcsign.indexOf("-") === 0) {
         this.answer = this.calc1 - this.answer;
         this.calc1 = "";
+      } else if (this.calcsign.indexOf("*") === 0) {
+        this.answer = this.calc1 * this.answer;
+        this.calc1 = "";
+      } else if (this.calcsign.indexOf("/") === 0) {
+        this.answer = this.calc1 / this.answer;
+        this.calc1 = "";
       }
     },
     add() {
       this.calc1 = this.answer;
       this.calcsign = "+";
+      this.answer = "";
     },
     minus() {
       this.calc1 = this.answer;
       this.calcsign = "-";
+      this.answer = "";
     },
     divide() {
       this.calc1 = this.answer;
       this.calcsign = "/";
+      this.answer = "";
     },
     mutiply() {
       this.calc1 = this.answer;
       this.calcsign = "*";
+      this.answer = "";
     },
     numberdot() {
       if (this.answer.indexOf(".") === -1) {
@@ -101,10 +113,23 @@ export default {
   height: 325px;
 }
 button {
-  background-color: rgb(227, 196, 255);
+  background-color: rgb(255, 197, 80);
   font-size: 15px;
 }
 button:hover {
-  background-color: #8b91ff;
+  background-color: #ff8f1e;
+}
+#calc {
+  float: right;
+  margin-left: 360px;
+  font-size: 20px;
+}
+#operation {
+  float: left;
+}
+.outputs {
+  display: flex;
+  background-color: rgb(255, 244, 227);
+  height: 70px;
 }
 </style>
