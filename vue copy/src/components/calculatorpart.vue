@@ -60,15 +60,19 @@ export default {
       if (this.calcsign.indexOf("+") === 0) {
         this.answer = +this.calc1 + +this.answer;
         this.calc1 = "";
+        this.calcsign = "";
       } else if (this.calcsign.indexOf("-") === 0) {
         this.answer = this.calc1 - this.answer;
         this.calc1 = "";
+        this.calcsign = "";
       } else if (this.calcsign.indexOf("*") === 0) {
         this.answer = this.calc1 * this.answer;
         this.calc1 = "";
+        this.calcsign = "";
       } else if (this.calcsign.indexOf("/") === 0) {
         this.answer = this.calc1 / this.answer;
         this.calc1 = "";
+        this.calcsign = "";
       }
     },
     add() {
