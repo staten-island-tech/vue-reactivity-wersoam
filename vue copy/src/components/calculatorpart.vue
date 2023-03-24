@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: "answer",
+  name: "calculator",
   data() {
     return {
       answer: "",
