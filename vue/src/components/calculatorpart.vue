@@ -28,7 +28,7 @@
         <button @click="mutiply()">*</button>
       </div>
       <div>
-        <button @click="numberup('00')">00</button>
+        <button @click="neg()">+/-</button>
         <button @click="numberup('0')">0</button>
         <button @click="numberdot()">.</button>
         <button @click="divide()">/</button>
@@ -100,7 +100,9 @@ export default {
         this.answer = this.answer + ".";
       }
     },
-
+    neg() {
+      this.answer = this.answer * -1;
+    },
     numberup(number) {
       this.answer = this.answer + number;
     },
